@@ -31,8 +31,8 @@ class DemoMail extends Mailable
     public function build()
     {
         
-        return $this->from('mo.acedo@gmail.com')
-            ->to('movilmacedo@gmail.com')
+        return $this->from('sender@gmail.com')
+            ->to('demo@gmail.com')
             ->view('mail');
     }
 }
