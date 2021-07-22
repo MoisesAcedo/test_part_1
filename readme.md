@@ -1,3 +1,22 @@
+How to install this project
+1 - You must clone this repository
+2 - You must install the composer and node dependencies with the commands:
+composer install
+npm install
+3 - You must edit the .env.example file and rename it to .env you must change the name of the database, user, password, etc.
+4 - You must generate the key for the .env file with the command:
+php artisan key: generate
+5 - You must create the database in the path and parameters that you have configured in the .env file and execute the items migration with the command:
+php artisan migrate
+6 - the path / public / of the project should open the project page, for this it is necessary to have an apache php server running and another mysql, you could use for example xampp or wampp.
+7 - A simple CRUD can be made, displaying each section.
+8 - The sending of emails from the save and update methods is configured, but the line is commented:
+//Mail::to("demoo@gmail.com")->send(new DemoMail ($ objDemo));
+9 - To uncomment the line, you must configure the mail server in the .env, config / mail files
+10 - In the file app / mail / DemoMail.php you have to change the recipient and sender of the mail.
+11 - The mail view is in resources / views / mail.blade.php
+12 - A console job has been created that will run every hour, this configuration must be reviewed in: app / console / kernel.php and app / jobs / mailJob.php
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
