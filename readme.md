@@ -1,3 +1,25 @@
+<h5>How to install this project</h5>
+<ol>
+<li>You must clone this repository</li>
+<li>You must install the composer and node dependencies with the commands:
+    <ul><li>composer install</li>
+        <li>npm install</li></ul></li>
+<li>You must edit the .env.example file and rename it to .env you must change the name of the database, user, password, etc.</li>
+<li>You must generate the key for the .env file with the command:
+php artisan key: generate</li>
+<li>You must create the database in the path and parameters that you have configured in the .env file and execute the items migration with the command:
+php artisan migrate</li>
+<li>The path / public / of the project should open the project page, for this it is necessary to have an apache php server running and another mysql, you could use for example xampp or wampp.</li>
+<li>A simple CRUD can be made, displaying each section.</li>
+    <li>Laravel uses MVC pattern mainly through files:<ul><li>routes/web.php</li><li>app/Controllers/ItemController.php (controller)</li> <li>resources/item.blade.php (view)</li> 
+        <li>app/item (model)</li></ul></li>    
+<li>The sending of emails from the save and update methods is configured, but the line is commented:
+//Mail::to("demoo@gmail.com")->send(new DemoMail ($ objDemo));</li>
+<li>To uncomment the line, you must configure the mail server in the .env, config / mail files</li>
+<li>In the file app / mail / DemoMail.php you have to change the recipient and sender of the mail.</li>
+<li>The mail view is in resources / views / mail.blade.php</li>
+<li>A console job has been created that will run every hour, this configuration must be reviewed in: app / console / kernel.php and app / jobs / mailJob.php</li>
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
