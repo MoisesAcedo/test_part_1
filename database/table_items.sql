@@ -1,0 +1,1 @@
+CREATE TABLE `test_part_1`.`items` ( `id` INT(150) NOT NULL , `name` VARCHAR(200) NOT NULL , `description` VARCHAR(500) NOT NULL , `created_at` DATE NOT NULL ) ENGINE = InnoDB;
